@@ -1,0 +1,58 @@
+----
+title: Why I Started to Use Hakyll
+tags: hakyll haskell blog
+----
+
+## WordPress
+
+I used to have a WordPress personal page for posting some short posts and while it worked *okay*, I was never really a huge fan of the system. I do admire the work done by the WP devs and I think they've changed the landscape of how *non-computer people* can create and manage their websites.
+
+But as someone who spends about half their time at the computer in a terminal emulator, WordPress seems a bit wasteful. Why?
+
+* Quite often new security flaws are discovered in WordPress
+* The vast majority of the dynamic features it provides aren't really necessary for simple websites
+* Some features that are useful (say, post writing using Markdown) are not available in stock WP (there are plugins but the more plugins you have the more attack vectors you have)
+* Requires using a database (not a huge flaw, but uses unnecessary resources)
+
+WordPress is a fine piece of software, but ultimately, not fit for my needs.
+
+
+## Static website generators
+
+Given my gripes with WP, I've long considered finding some light-weight alternative solution.  I really love the general idea behind static website generators. Why?
+
+### Extremely Light on Resources
+
+The webserver is simply serving html files. No PHP, no interpretation, no database queries -- just serving files.
+
+### Secure-by-default
+
+Since you're only serving static files, you're removing a ton of attack vectors. No more SQL injection, no more PHP injection.
+
+### Simple Maintenance
+
+Need to backup the website? Just copy the source files. Even better, throw them into a source code management system.
+
+Need to move your website? Just copy over a bunch of files. No more sqldumps and imports. Oh, and all your content is in a completely standard format.
+
+
+## Jekyll and Hyde
+
+I've heard a lot of good things about [Jekyll](http://jekyllrb.com/) and [Hyde](http://ringce.com/hyde) which have come recommended by several of my Ruby-verse (the former) and Pythonista (the latter) friends.
+
+Still, neither were entirely convincing. Mostly due to a lack of enthusiasm rather than any technical faults (both are great projects).
+
+
+## Hakyll
+
+I revisited my website-revival plan again and again but only just now got that extra motivation boost I was lacking -- my project supervisor suggested writing down as much of my thoughts related to my project work as possible. This kind of writing isn't exactly my forte, but I have no doubt that it's a great idea.
+
+I've been trying to experiment with as many real world Haskell libraries/applications as possible lately and this was the perfect opportunity to have a go at using Hakyll.
+
+
+## First Impressions
+
+I do admit to be impressed by how little work is required to set up a fully
+functional website with Hakyll. Furthermore, I haven't delved too deep into its possibilities yet, but so far it seems extremely configurable and extensible.
+
+The code provided as a starting point reads extremely well and I'm confident that even someone with barely any Haskell knowledge could configure their own website. I think this speaks (at least on some level) to good design. I will certainly be using Hakyll as an example of an accessible, real-world application written in Haskell.
