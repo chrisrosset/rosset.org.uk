@@ -4,8 +4,7 @@ title: Contact
 
 ## E-mail
 
-If you want to drop me an email, feel free to do so using the following
-address:
+If you feel like dropping me an email, do so using the following address:
 
     chris (at) rosset (dot) org (dot) uk
 

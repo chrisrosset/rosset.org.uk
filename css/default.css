@@ -8,12 +8,12 @@ body {
 }
 
 a:link {
-    color:#dd0000;
+    color:#e03333;
     text-decoration: none;
 } /* unvisited link */
 
 a:visited {
-    color:#bb0000;
+    color:#dd3333;
     text-decoration: none;
 } /* visited link */
 
