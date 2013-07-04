@@ -1,3 +1,9 @@
+----
+title: Discovering Functors
+tags: haskell functors
+----
+
+
 Everyone familiar with at least some functional programming concepts should be familiar with the concept of `map` -- a simple, yet extremely useful function.
 
 In simple terms, `map` is used to, well, *map* a function to each and every element of a collection in order to produce a collection comprising of the results of applying the function to the elements of the input.
