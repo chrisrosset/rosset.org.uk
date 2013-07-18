@@ -16,11 +16,6 @@ main = hakyllWith config $ do
         route   idRoute
         compile compressCssCompiler
 
-    match "404.md" $ do
-        route   $ setExtension "html"
-        compile $ pandocCompiler
-            >>= loadAndApplyTemplate "templates/default.html" defaultContext
-
     match "pages/*" $ do
         route   $ gsubRoute "pages/" (const "") `composeRoutes` setExtension "html"
         compile $ pandocCompiler
