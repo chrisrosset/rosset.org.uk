@@ -68,8 +68,8 @@ postCtx =
 
 --------------------------------------------------------------------------------
 
-config  = defaultConfiguration
-	{ deployCommand = "rsync --checksum --delete -avpe 'ssh' \
+config = defaultConfiguration
+    { deployCommand = "rsync --checksum --delete -avpe 'ssh' \
                        \_site/ ctr@rosset.org.uk:/var/www/rosset.org.uk/"
-	}
+    }
 
