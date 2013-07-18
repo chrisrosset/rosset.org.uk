@@ -6,7 +6,9 @@ import           Hakyll
 --------------------------------------------------------------------------------
 main :: IO ()
 main = hakyllWith config $ do
-    match ("images/*" .||. "files/*" .||. "robots.txt" .||. "favicon.ico") $ do
+    match ("images/*" .||. "files/*" .||.
+           "robots.txt" .||. "favicon.ico" .||.
+           ".htaccess") $ do
         route   idRoute
         compile copyFileCompiler
 
@@ -14,7 +16,7 @@ main = hakyllWith config $ do
         route   idRoute
         compile compressCssCompiler
 
-    match (fromList ["about.markdown", "contact.markdown"]) $ do
+    match (fromList ["404.md", "about.markdown", "contact.markdown"]) $ do
         route   $ setExtension "html"
         compile $ pandocCompiler
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
