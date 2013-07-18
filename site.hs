@@ -1,7 +1,8 @@
 --------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
-import           Data.Monoid (mappend)
-import           Hakyll
+import Data.Monoid (mappend)
+import Hakyll
+import System.FilePath (takeDirectory, takeFileName)
 
 --------------------------------------------------------------------------------
 main :: IO ()
@@ -73,5 +74,9 @@ postCtx =
 config = defaultConfiguration
     { deployCommand = "rsync --checksum --delete -avpe 'ssh' \
                        \_site/ ctr@rosset.org.uk:/var/www/rosset.org.uk/"
+    , ignoreFile    = ignoreFile'
     }
-
+    where
+        ignoreFile' path
+            | ".htaccess" == takeFileName path = False
+            | otherwise                        = (ignoreFile defaultConfiguration) path
